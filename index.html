@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Life Maintenance Guide — A System Dashboard for Adulting</title>
+<meta name="description" content="Systemize the invisible mental load of life into actionable runbooks.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <p class="eyebrow">Runbook · v1.0</p>
+  <h1>The Life<br>Maintenance Guide</h1>
+  <p class="sub">A System Dashboard and User Manual for Adulting.</p>
+  <p class="tag">Systemizing the invisible mental load of life management into actionable runbooks.</p>
+</header>
+
+<section class="card meter-card">
+  <div class="meter-head">
+    <h2>Overwhelm Meter</h2>
+    <span id="meterPct" class="meter-pct">0%</span>
+  </div>
+  <div class="meter">
+    <div class="meter-zones">
+      <span style="left:0%">Low</span><span style="left:33%">Medium</span>
+      <span style="left:62%">High</span><span style="left:86%">Critical</span>
+    </div>
+    <div class="meter-track">
+      <div class="meter-fill" id="meterFill"></div>
+      <div class="meter-crash" title="System Crash / Paralysis threshold"></div>
+    </div>
+  </div>
+  <p id="meterStatus" class="meter-status">All systems nominal.</p>
+</section>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="pillars" class="active">Pillars</button>
+  <button data-tab="daily">Daily</button>
+  <button data-tab="weekly">Weekly</button>
+  <button data-tab="monthly">Monthly</button>
+  <button data-tab="seasonal">Seasonal</button>
+</nav>
+
+<main>
+  <section id="view-pillars" class="pillar-grid"></section>
+  <section id="view-tasks" class="hidden"></section>
+</main>
+
+<section class="card add-card">
+  <h3>Add a task</h3>
+  <div class="add-row">
+    <input id="newText" type="text" placeholder="e.g. Water the plants" maxlength="120">
+    <select id="newPillar"></select>
+    <select id="newFreq">
+      <option value="daily">Daily</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+      <option value="seasonal">Seasonal</option>
+    </select>
+    <button id="addBtn" class="btn">Add</button>
+  </div>
+</section>
+
+<footer>
+  <p class="golden"><strong>The Golden Rule:</strong> Rest without feeling lazy.<br>
+  <span>Rest is not the absence of maintenance. It is the most critical maintenance task of all.</span></p>
+  <p class="insight">Synthesis Insight: Macro-crises are almost always the result of neglected micro-maintenance.</p>
+  <button id="resetBtn" class="btn btn-quiet">Reset to defaults</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
